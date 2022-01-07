@@ -23,6 +23,7 @@
 		E00B7A3C2785188500CA24BE /* TaskManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00B7A3B2785188500CA24BE /* TaskManagerTests.swift */; };
 		E00B7A3F2785192E00CA24BE /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00B7A3E2785192E00CA24BE /* TaskManager.swift */; };
 		E02DE06A27888AE3003E7CB2 /* TaskListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02DE06927888AE3003E7CB2 /* TaskListViewControllerTests.swift */; };
+		E02DE06C27889273003E7CB2 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02DE06B27889273003E7CB2 /* DataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		E00B7A3B2785188500CA24BE /* TaskManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManagerTests.swift; sourceTree = "<group>"; };
 		E00B7A3E2785192E00CA24BE /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 		E02DE06927888AE3003E7CB2 /* TaskListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewControllerTests.swift; sourceTree = "<group>"; };
+		E02DE06B27889273003E7CB2 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				E00B7A012785068400CA24BE /* TaskListViewController.swift */,
+				E02DE06B27889273003E7CB2 /* DataProvider.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				E00B7A3F2785192E00CA24BE /* TaskManager.swift in Sources */,
 				E00B7A3527850A3600CA24BE /* Task.swift in Sources */,
 				E00B7A022785068400CA24BE /* TaskListViewController.swift in Sources */,
+				E02DE06C27889273003E7CB2 /* DataProvider.swift in Sources */,
 				E00B7A372785111B00CA24BE /* Location.swift in Sources */,
 				E00B79FE2785068400CA24BE /* AppDelegate.swift in Sources */,
 				E00B7A002785068400CA24BE /* SceneDelegate.swift in Sources */,
