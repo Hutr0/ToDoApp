@@ -16,7 +16,13 @@ class DataProviderTests: XCTestCase {
     override func setUpWithError() throws {
         sut = DataProvider()
         sut.taskManager = TaskManager()
-        tableView = UITableView()
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: String(describing: TaskListViewController.self)) as? TaskListViewController
+        
+        controller?.loadViewIfNeeded()
+        
+        tableView = controller?.tableView
         tableView.dataSource = sut
     }
 
@@ -58,5 +64,30 @@ class DataProviderTests: XCTestCase {
         let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0))
         
         XCTAssertTrue(cell is TaskCell)
+    }
+    
+    func testCellForRowAtIndexPathDequeuesCellFromTableView() {
+        let mockTableView = MockTableView()
+        mockTableView.dataSource = sut
+        mockTableView.register(TaskCell.self, forCellReuseIdentifier: String(describing: TaskCell.self))
+        
+        sut.taskManager?.add(task: Task(title: "Foo"))
+        mockTableView.reloadData()
+        
+        mockTableView.cellForRow(at: IndexPath(row: 0, section: 0))
+        
+        XCTAssertTrue(mockTableView.cellIsDequeued)
+    }
+}
+
+extension DataProviderTests {
+    class MockTableView: UITableView {
+        var cellIsDequeued = false
+        
+        override func dequeueReusableCell(withIdentifier identifier: String, for indexPath: IndexPath) -> UITableViewCell {
+            cellIsDequeued = true
+            
+            return super.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
+        }
     }
 }
