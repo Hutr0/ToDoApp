@@ -25,6 +25,7 @@
 		E02DE06A27888AE3003E7CB2 /* TaskListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02DE06927888AE3003E7CB2 /* TaskListViewControllerTests.swift */; };
 		E02DE06C27889273003E7CB2 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02DE06B27889273003E7CB2 /* DataProvider.swift */; };
 		E02DE06E27889DDD003E7CB2 /* DataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02DE06D27889DDD003E7CB2 /* DataProviderTests.swift */; };
+		E02DE0702788A8A9003E7CB2 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02DE06F2788A8A9003E7CB2 /* TaskCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		E02DE06927888AE3003E7CB2 /* TaskListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewControllerTests.swift; sourceTree = "<group>"; };
 		E02DE06B27889273003E7CB2 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		E02DE06D27889DDD003E7CB2 /* DataProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderTests.swift; sourceTree = "<group>"; };
+		E02DE06F2788A8A9003E7CB2 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 		E00B7A2E278506E400CA24BE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E02DE06F2788A8A9003E7CB2 /* TaskCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				E00B7A3527850A3600CA24BE /* Task.swift in Sources */,
 				E00B7A022785068400CA24BE /* TaskListViewController.swift in Sources */,
 				E02DE06C27889273003E7CB2 /* DataProvider.swift in Sources */,
+				E02DE0702788A8A9003E7CB2 /* TaskCell.swift in Sources */,
 				E00B7A372785111B00CA24BE /* Location.swift in Sources */,
 				E00B79FE2785068400CA24BE /* AppDelegate.swift in Sources */,
 				E00B7A002785068400CA24BE /* SceneDelegate.swift in Sources */,

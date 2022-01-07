@@ -13,6 +13,13 @@ struct Task {
     let description: String?
     let location: Location?
     
+    init(title: String) {
+        self.title = title
+        self.date = Date()
+        self.description = nil
+        self.location = nil
+    }
+    
     init(title: String,
          description: String? = nil,
          location: Location? = nil) {
