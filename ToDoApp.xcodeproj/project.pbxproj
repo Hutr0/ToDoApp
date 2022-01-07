@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		E00B79FE2785068400CA24BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00B79FD2785068400CA24BE /* AppDelegate.swift */; };
 		E00B7A002785068400CA24BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00B79FF2785068400CA24BE /* SceneDelegate.swift */; };
-		E00B7A022785068400CA24BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00B7A012785068400CA24BE /* ViewController.swift */; };
+		E00B7A022785068400CA24BE /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00B7A012785068400CA24BE /* TaskListViewController.swift */; };
 		E00B7A052785068400CA24BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E00B7A032785068400CA24BE /* Main.storyboard */; };
 		E00B7A072785068500CA24BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E00B7A062785068500CA24BE /* Assets.xcassets */; };
 		E00B7A0A2785068500CA24BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E00B7A082785068500CA24BE /* LaunchScreen.storyboard */; };
@@ -22,6 +22,7 @@
 		E00B7A392785127D00CA24BE /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00B7A382785127D00CA24BE /* LocationTests.swift */; };
 		E00B7A3C2785188500CA24BE /* TaskManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00B7A3B2785188500CA24BE /* TaskManagerTests.swift */; };
 		E00B7A3F2785192E00CA24BE /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00B7A3E2785192E00CA24BE /* TaskManager.swift */; };
+		E02DE06A27888AE3003E7CB2 /* TaskListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02DE06927888AE3003E7CB2 /* TaskListViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +46,7 @@
 		E00B79FA2785068400CA24BE /* ToDoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E00B79FD2785068400CA24BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E00B79FF2785068400CA24BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E00B7A012785068400CA24BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E00B7A012785068400CA24BE /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
 		E00B7A042785068400CA24BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E00B7A062785068500CA24BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E00B7A092785068500CA24BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,6 +62,7 @@
 		E00B7A382785127D00CA24BE /* LocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
 		E00B7A3B2785188500CA24BE /* TaskManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManagerTests.swift; sourceTree = "<group>"; };
 		E00B7A3E2785192E00CA24BE /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
+		E02DE06927888AE3003E7CB2 /* TaskListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,9 +125,10 @@
 		E00B7A132785068600CA24BE /* ToDoAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				E00B7A142785068600CA24BE /* ToDoAppTests.swift */,
+				E02DE06827888A9F003E7CB2 /* Controller */,
 				E00B7A3A2785186300CA24BE /* Manager */,
 				E00B7A332785095A00CA24BE /* Model */,
+				E00B7A142785068600CA24BE /* ToDoAppTests.swift */,
 			);
 			path = ToDoAppTests;
 			sourceTree = "<group>";
@@ -158,7 +161,7 @@
 		E00B7A2F278506E900CA24BE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				E00B7A012785068400CA24BE /* ViewController.swift */,
+				E00B7A012785068400CA24BE /* TaskListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -199,6 +202,14 @@
 				E00B7A3E2785192E00CA24BE /* TaskManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		E02DE06827888A9F003E7CB2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E02DE06927888AE3003E7CB2 /* TaskListViewControllerTests.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,7 +345,7 @@
 			files = (
 				E00B7A3F2785192E00CA24BE /* TaskManager.swift in Sources */,
 				E00B7A3527850A3600CA24BE /* Task.swift in Sources */,
-				E00B7A022785068400CA24BE /* ViewController.swift in Sources */,
+				E00B7A022785068400CA24BE /* TaskListViewController.swift in Sources */,
 				E00B7A372785111B00CA24BE /* Location.swift in Sources */,
 				E00B79FE2785068400CA24BE /* AppDelegate.swift in Sources */,
 				E00B7A002785068400CA24BE /* SceneDelegate.swift in Sources */,
@@ -348,6 +359,7 @@
 				E00B7A322785093200CA24BE /* TaskTests.swift in Sources */,
 				E00B7A392785127D00CA24BE /* LocationTests.swift in Sources */,
 				E00B7A3C2785188500CA24BE /* TaskManagerTests.swift in Sources */,
+				E02DE06A27888AE3003E7CB2 /* TaskListViewControllerTests.swift in Sources */,
 				E00B7A152785068600CA24BE /* ToDoAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
