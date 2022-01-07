@@ -39,6 +39,10 @@ extension DataProvider: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: TaskCell.self), for: indexPath) as! TaskCell
         
+        if let task = taskManager?.task(at: indexPath.row) {
+            cell.configure(withTask: task)
+        }
+        
         return cell
     }
 }
