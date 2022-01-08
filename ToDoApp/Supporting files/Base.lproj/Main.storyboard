@@ -54,6 +54,7 @@
                                             <outlet property="dateLabel" destination="uNg-Bu-dDi" id="xyl-iL-amj"/>
                                             <outlet property="locationLabel" destination="awX-rd-31l" id="QXt-7M-EFv"/>
                                             <outlet property="titleLabel" destination="cL8-X3-teW" id="19F-eT-8As"/>
+                                            <segue destination="0A3-fQ-tWn" kind="showDetail" id="4UV-aS-eUi"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -81,6 +82,54 @@
                 <customObject id="Rya-4l-qbs" customClass="DataProvider" customModule="ToDoApp" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="-88" y="74"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="mUv-qa-2at">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="0A3-fQ-tWn" customClass="DetailViewController" customModule="ToDoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u68-fr-rnH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldt-dC-g53">
+                                <rect key="frame" x="186" y="55" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SW4-DX-b4J">
+                                <rect key="frame" x="186" y="99" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwk-Q0-S9r">
+                                <rect key="frame" x="186" y="148" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KW8-qh-tLh">
+                                <rect key="frame" x="87" y="357" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="f0n-Sk-hOw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="iwk-Q0-S9r" id="N7G-Xn-DcD"/>
+                        <outlet property="descriptionLabel" destination="SW4-DX-b4J" id="0Tj-Rk-J8x"/>
+                        <outlet property="mapView" destination="KW8-qh-tLh" id="d8L-dp-kbH"/>
+                        <outlet property="titleLabel" destination="ldt-dC-g53" id="4rz-Lq-VeI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lYr-b7-EtM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="874" y="74"/>
         </scene>
     </scenes>
     <resources>
