@@ -105,8 +105,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2t-oK-vH7">
+                                <rect key="frame" x="186" y="147" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwk-Q0-S9r">
-                                <rect key="frame" x="186" y="148" width="42" height="21"/>
+                                <rect key="frame" x="186" y="190" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -123,6 +130,7 @@
                     <connections>
                         <outlet property="dateLabel" destination="iwk-Q0-S9r" id="N7G-Xn-DcD"/>
                         <outlet property="descriptionLabel" destination="SW4-DX-b4J" id="0Tj-Rk-J8x"/>
+                        <outlet property="locationLabel" destination="S2t-oK-vH7" id="Ked-xa-SUK"/>
                         <outlet property="mapView" destination="KW8-qh-tLh" id="d8L-dp-kbH"/>
                         <outlet property="titleLabel" destination="ldt-dC-g53" id="4rz-Lq-VeI"/>
                     </connections>
