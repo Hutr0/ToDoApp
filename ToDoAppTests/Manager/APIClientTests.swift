@@ -9,9 +9,16 @@ import XCTest
 @testable import ToDoApp
 
 class APIClientTests: XCTestCase {
+    
+    var mockURLSession: MockURLSession!
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        mockURLSession = MockURLSession()
+        let sut = APIClient()
+        sut.urlSession = mockURLSession
+        
+        let completionHandler = {(token: String?, Error: Error?) in }
+        sut.login(withName: "name", password: "qwerty", completionHandler: completionHandler)
     }
 
     override func tearDownWithError() throws {
@@ -19,13 +26,6 @@ class APIClientTests: XCTestCase {
     }
     
     func testLoginUsesCorrectHost() {
-        let mockURLSession = MockURLSession()
-        let sut = APIClient()
-        sut.urlSession = mockURLSession
-        
-        let completionHandler = {(token: String?, Error: Error?) in }
-        sut.login(withName: "name", password: "qwerty", completionHandler: completionHandler)
-        
         guard let url = mockURLSession.url else {
             XCTFail()
             return
@@ -33,6 +33,16 @@ class APIClientTests: XCTestCase {
         
         let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: true)
         XCTAssertEqual(urlComponents?.host, "todoapp.com")
+    }
+    
+    func testLoginUsesCorrectPath() {
+        guard let url = mockURLSession.url else {
+            XCTFail()
+            return
+        }
+        
+        let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: true)
+        XCTAssertEqual(urlComponents?.path, "/login")
     }
 }
 
