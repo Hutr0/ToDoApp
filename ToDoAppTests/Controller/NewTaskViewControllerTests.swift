@@ -68,7 +68,7 @@ class NewTaskViewControllerTests: XCTestCase {
         let df = DateFormatter()
         df.dateFormat = "dd.MM.yy"
         let date = df.date(from: "01.11.20")
-        let coordinate = CLLocationCoordinate2D(latitude: 55.753220, longitude: 37.622513)
+        let coordinate = CLLocationCoordinate2D(latitude: 55.7615902, longitude: 37.60946)
         let location = Location(name: "Baz", coordinate: coordinate)
         let generatedTask = Task(title: "Foo", description: "Bar", date: date!, location: location)
         
@@ -90,6 +90,28 @@ class NewTaskViewControllerTests: XCTestCase {
         }
         
         XCTAssertTrue(actions.contains("save"))
+    }
+    
+    func testGeocoderFetchesCorrectCoordinate() {
+        let geocoderAnswer = expectation(description: "Geocoder answer")
+        let addressString = "Москва"
+        let geocoder = CLGeocoder()
+        geocoder.geocodeAddressString(addressString) { placemarks, error in
+            let placemark = placemarks?.first
+            let coordinate = placemark?.location?.coordinate
+            
+            guard let latitude = coordinate?.latitude,
+                  let longitude = coordinate?.longitude
+            else {
+                XCTFail()
+                return
+            }
+            
+            XCTAssertEqual(latitude, 55.7615902, accuracy: 0.001)
+            XCTAssertEqual(longitude, 37.60946, accuracy: 0.001)
+            geocoderAnswer.fulfill()
+        }
+        waitForExpectations(timeout: 5, handler: nil)
     }
 }
 
