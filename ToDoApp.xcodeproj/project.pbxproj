@@ -31,6 +31,8 @@
 		E02DE0772789D1A1003E7CB2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02DE0762789D1A1003E7CB2 /* DetailViewController.swift */; };
 		E02DE0792789F787003E7CB2 /* NewTaskViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02DE0782789F787003E7CB2 /* NewTaskViewControllerTests.swift */; };
 		E02DE07B2789F7F1003E7CB2 /* NewTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02DE07A2789F7F1003E7CB2 /* NewTaskViewController.swift */; };
+		E02DE07D278A300E003E7CB2 /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02DE07C278A300E003E7CB2 /* APIClientTests.swift */; };
+		E02DE07F278A30E5003E7CB2 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02DE07E278A30E5003E7CB2 /* APIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		E02DE0762789D1A1003E7CB2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E02DE0782789F787003E7CB2 /* NewTaskViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskViewControllerTests.swift; sourceTree = "<group>"; };
 		E02DE07A2789F7F1003E7CB2 /* NewTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskViewController.swift; sourceTree = "<group>"; };
+		E02DE07C278A300E003E7CB2 /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
+		E02DE07E278A30E5003E7CB2 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				E00B7A3B2785188500CA24BE /* TaskManagerTests.swift */,
+				E02DE07C278A300E003E7CB2 /* APIClientTests.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				E00B7A3E2785192E00CA24BE /* TaskManager.swift */,
+				E02DE07E278A30E5003E7CB2 /* APIClient.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -380,6 +386,7 @@
 				E00B7A3527850A3600CA24BE /* Task.swift in Sources */,
 				E00B7A022785068400CA24BE /* TaskListViewController.swift in Sources */,
 				E02DE06C27889273003E7CB2 /* DataProvider.swift in Sources */,
+				E02DE07F278A30E5003E7CB2 /* APIClient.swift in Sources */,
 				E02DE0702788A8A9003E7CB2 /* TaskCell.swift in Sources */,
 				E02DE07B2789F7F1003E7CB2 /* NewTaskViewController.swift in Sources */,
 				E00B7A372785111B00CA24BE /* Location.swift in Sources */,
@@ -395,6 +402,7 @@
 				E00B7A322785093200CA24BE /* TaskTests.swift in Sources */,
 				E00B7A392785127D00CA24BE /* LocationTests.swift in Sources */,
 				E02DE0732789B246003E7CB2 /* TaskCellTests.swift in Sources */,
+				E02DE07D278A300E003E7CB2 /* APIClientTests.swift in Sources */,
 				E02DE06E27889DDD003E7CB2 /* DataProviderTests.swift in Sources */,
 				E02DE0792789F787003E7CB2 /* NewTaskViewControllerTests.swift in Sources */,
 				E00B7A3C2785188500CA24BE /* TaskManagerTests.swift in Sources */,
