@@ -27,6 +27,23 @@ extension DataProvider: UITableViewDelegate {
             return "Undone"
         }
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            guard let section = Section(rawValue: indexPath.section),
+                  let taskManager = taskManager
+            else { fatalError() }
+            
+            switch section {
+            case .todo:
+                taskManager.checkTask(at: indexPath.row)
+            case .done:
+                taskManager.uncheckTask(at: indexPath.row)
+            }
+            
+            tableView.reloadData()
+        }
+    }
 }
 
 extension DataProvider: UITableViewDataSource {

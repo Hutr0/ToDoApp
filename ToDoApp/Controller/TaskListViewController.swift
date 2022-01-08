@@ -13,5 +13,8 @@ class TaskListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        DataProvider().taskManager?.add(task: Task(title: "Foo"))
+//        DataProvider().taskManager?.checkTask(at: 0)
+//        DataProvider().taskManager?.add(task: Task(title: "Bar"))
     }
 }
