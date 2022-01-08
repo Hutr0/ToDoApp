@@ -8,10 +8,10 @@
 import Foundation
 
 struct Task {
-    private(set) var date: Date?
     let title: String
     let description: String?
     let location: Location?
+    private(set) var date: Date?
     
     init(title: String) {
         self.title = title
