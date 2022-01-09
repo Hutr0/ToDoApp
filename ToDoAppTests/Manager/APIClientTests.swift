@@ -100,16 +100,11 @@ class APIClientTests: XCTestCase {
         }
     }
     
-    enum ServerError: Error {
-        case serverError
-    }
-    
-    func testLoginWhenErrorReturnsError() {
-        let data: Data? = nil
-        let urlResponse: URLResponse? = nil
-        let responseError: Error? = ServerError.serverError
-        
-        mockURLSession = MockURLSession(data: data, urlResponse: urlResponse, responseError: responseError)
+    func testLoginWhenResponseErrorReturnsError() {
+        let token = "stringToken"
+        let JSONDataStub = "{\"token\": \"\(token)\"}".data(using: .utf8)
+        let error = NSError(domain: "Server error", code: 404, userInfo: nil)
+        mockURLSession = MockURLSession(data: JSONDataStub, urlResponse: nil, responseError: error)
         sut.urlSession = mockURLSession
         let errorExpectation = expectation(description: "Error expectation")
         
