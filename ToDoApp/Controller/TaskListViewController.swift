@@ -13,13 +13,14 @@ class TaskListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        DataProvider().taskManager?.add(task: Task(title: "Foo"))
-//        DataProvider().taskManager?.checkTask(at: 0)
-//        DataProvider().taskManager?.add(task: Task(title: "Bar"))
+
+        let taskManager = TaskManager()
+        dataProvider.taskManager = taskManager
     }
     
     @IBAction func addNewTask(_ sender: UIBarButtonItem) {
         if let viewController = storyboard?.instantiateViewController(withIdentifier: String(describing: NewTaskViewController.self)) as? NewTaskViewController {
+            viewController.taskManager = self.dataProvider.taskManager
             present(viewController, animated: true, completion: nil)
         }
     }
