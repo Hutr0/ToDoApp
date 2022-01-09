@@ -7,6 +7,10 @@
 
 import Foundation
 
+enum NetworkError: Error {
+    case emptyData
+}
+
 protocol URLSessionProtocol {
     func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask
 }
@@ -26,16 +30,27 @@ class APIClient {
         }
         
         let query = "name=\(name)&password=\(password)"
-        guard let url = URL(string: "https://todoapp.com/login?\(query)") else {
-            fatalError()
-        }
+        guard let url = URL(string: "https://todoapp.com/login?\(query)") else { fatalError() }
         
         urlSession.dataTask(with: url) { data, response, error in
-            guard let data = data else { fatalError() }
-            let dictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: String]
             
-            let token = dictionary["token"]
-            completionHandler(token, nil)
+            if let error = error {
+                completionHandler(nil, error)
+                return 
+            }
+            
+            do {
+                guard let data = data else {
+                    completionHandler(nil, NetworkError.emptyData)
+                    return
+                }
+                let dictionary = try JSONSerialization.jsonObject(with: data, options: []) as! [String: String]
+                
+                let token = dictionary["token"]
+                completionHandler(token, nil)
+            } catch {
+                completionHandler(nil, error)
+            }
         }.resume()
     }
 }
