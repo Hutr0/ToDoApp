@@ -19,6 +19,18 @@ struct Location {
 }
 
 extension Location {
+    var dict: PlistDictionary {
+        var dictionary: PlistDictionary = [:]
+        
+        dictionary["name"] = self.name
+        if let coordinate = self.coordinate {
+            dictionary["latitude"] = coordinate.latitude
+            dictionary["longitude"] = coordinate.longitude
+        }
+        
+        return dictionary
+    }
+    
     typealias PlistDictionary = [String : Any]
     init?(dict: PlistDictionary) {
         self.name = dict["name"] as! String

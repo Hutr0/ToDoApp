@@ -25,6 +25,19 @@ struct Task {
 }
 
 extension Task {
+    var dict: PlistDictionary {
+        var dictionary: PlistDictionary = [:]
+        
+        dictionary["title"] = self.title
+        dictionary["description"] = self.description
+        dictionary["date"] = self.date
+        if let location = location {
+            dictionary["location"] = location.dict
+        }
+        
+        return dictionary
+    }
+    
     typealias PlistDictionary = [String : Any]
     init?(dict: PlistDictionary) {
         self.title = dict["title"] as! String
