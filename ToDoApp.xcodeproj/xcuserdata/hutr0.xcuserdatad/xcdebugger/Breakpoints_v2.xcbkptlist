@@ -3,4 +3,102 @@
    uuid = "7A187F7D-66E2-4B0B-9A0B-5626B5FA39A7"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E9C63026-91DE-42C9-97E4-A76758B855EC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ToDoAppUITests/ToDoAppUITests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "testWhenCellIsSwipedLeftDoneButtonAppeared()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E9C63026-91DE-42C9-97E4-A76758B855EC - 70059ac2a2331df"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ToDoAppUITests.ToDoAppUITests.testWhenCellIsSwipedLeftDoneButtonAppeared() -&gt; ()"
+                  moduleName = "ToDoAppUITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hutr0/Library/Mobile%20Documents/com~apple~CloudDocs/Xcode%20Projects/SwiftBook%20%D1%83%D1%80%D0%BE%D0%BA%D0%B8/TDD/ToDoApp/ToDoAppUITests/ToDoAppUITests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "3759">
+               </Location>
+               <Location
+                  uuid = "E9C63026-91DE-42C9-97E4-A76758B855EC - 70059ac2a2331df"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ToDoAppUITests.ToDoAppUITests.testWhenCellIsSwipedLeftDoneButtonAppeared() -&gt; ()"
+                  moduleName = "ToDoAppUITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hutr0/Library/Mobile%20Documents/com~apple~CloudDocs/Xcode%20Projects/SwiftBook%20%D1%83%D1%80%D0%BE%D0%BA%D0%B8/TDD/ToDoApp/ToDoAppUITests/ToDoAppUITests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "5326">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5177D953-FACC-46C8-9E4F-FAC1ACD4A993"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ToDoAppUITests/ToDoAppUITests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "testExample()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5177D953-FACC-46C8-9E4F-FAC1ACD4A993 - eb2625e148f6f52e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ToDoAppUITests.ToDoAppUITests.testExample() throws -&gt; ()"
+                  moduleName = "ToDoAppUITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hutr0/Library/Mobile%20Documents/com~apple~CloudDocs/Xcode%20Projects/SwiftBook%20%D1%83%D1%80%D0%BE%D0%BA%D0%B8/TDD/ToDoApp/ToDoAppUITests/ToDoAppUITests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "3738">
+               </Location>
+               <Location
+                  uuid = "5177D953-FACC-46C8-9E4F-FAC1ACD4A993 - eb2625e148f6f56c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ToDoAppUITests.ToDoAppUITests.testExample() throws -&gt; ()"
+                  moduleName = "ToDoAppUITests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hutr0/Library/Mobile%20Documents/com~apple~CloudDocs/Xcode%20Projects/SwiftBook%20%D1%83%D1%80%D0%BE%D0%BA%D0%B8/TDD/ToDoApp/ToDoAppUITests/ToDoAppUITests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "5323">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

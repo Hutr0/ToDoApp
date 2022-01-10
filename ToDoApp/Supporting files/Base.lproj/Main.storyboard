@@ -27,28 +27,35 @@
                                             <rect key="frame" x="0.0" y="0.0" width="428" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cL8-X3-teW">
-                                                    <rect key="frame" x="20" y="11" width="42" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cL8-X3-teW">
+                                                    <rect key="frame" x="20" y="11.333333333333336" width="33" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awX-rd-31l">
-                                                    <rect key="frame" x="115" y="11" width="42" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awX-rd-31l">
+                                                    <rect key="frame" x="73" y="11.333333333333336" width="66" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNg-Bu-dDi">
-                                                    <rect key="frame" x="211" y="11" width="42" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNg-Bu-dDi">
+                                                    <rect key="frame" x="372" y="11.333333333333336" width="36" height="21"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="date"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="cL8-X3-teW" firstAttribute="centerY" secondItem="QtS-L8-7KH" secondAttribute="centerY" id="Dnt-rj-VaF"/>
+                                                <constraint firstItem="cL8-X3-teW" firstAttribute="leading" secondItem="QtS-L8-7KH" secondAttribute="leading" constant="20" symbolic="YES" id="Ln3-uW-FHH"/>
+                                                <constraint firstItem="awX-rd-31l" firstAttribute="leading" secondItem="cL8-X3-teW" secondAttribute="trailing" constant="20" id="UkQ-wQ-9or"/>
+                                                <constraint firstItem="uNg-Bu-dDi" firstAttribute="centerY" secondItem="QtS-L8-7KH" secondAttribute="centerY" id="bTW-3F-qP0"/>
+                                                <constraint firstAttribute="trailing" secondItem="uNg-Bu-dDi" secondAttribute="trailing" constant="20" symbolic="YES" id="bWS-mV-sSI"/>
+                                                <constraint firstItem="awX-rd-31l" firstAttribute="centerY" secondItem="QtS-L8-7KH" secondAttribute="centerY" id="gSN-DF-6Es"/>
+                                                <constraint firstItem="uNg-Bu-dDi" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="awX-rd-31l" secondAttribute="trailing" constant="8" symbolic="YES" id="sza-eO-nwA"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="dateLabel" destination="uNg-Bu-dDi" id="xyl-iL-amj"/>
