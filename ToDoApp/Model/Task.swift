@@ -12,6 +12,7 @@ struct Task {
     let description: String?
     let location: Location?
     let date: Date
+    var isDone = false
     
     init(title: String,
          description: String? = nil,

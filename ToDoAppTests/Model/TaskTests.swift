@@ -78,5 +78,10 @@ class TaskTests: XCTestCase {
         
         XCTAssertEqual(task, generatedTask)
     }
+    
+    func testWhenIsCreatedHasIsDoneEqualsFalse() {
+        let task = Task(title: "Foo")
+        XCTAssertFalse(task.isDone)
+    }
 }
  

@@ -22,8 +22,8 @@ class TaskCell: UITableViewCell {
         if done {
             let attributedString = NSAttributedString(string: "Foo", attributes: [.strikethroughStyle: NSUnderlineStyle.single.rawValue])
             titleLabel.attributedText = attributedString
-            dateLabel = nil
-            locationLabel = nil
+            dateLabel.text = ""
+            locationLabel.text = ""
         } else {
             let dateString = dateFormatter.string(from: task.date)
             dateLabel.text = dateString

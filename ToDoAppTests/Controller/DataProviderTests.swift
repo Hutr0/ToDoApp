@@ -141,6 +141,50 @@ class DataProviderTests: XCTestCase {
         XCTAssertEqual(sut.taskManager?.tasksCount, 1)
         XCTAssertEqual(sut.taskManager?.doneTasksCount, 0)
     }
+    
+    func testWhenSectionsHasntTasksSectionsNameNotSet() {
+        let firstSectionTitle = sut.tableView(tableView, titleForHeaderInSection: 0)
+        let secondSectionTitle = sut.tableView(tableView, titleForHeaderInSection: 1)
+        
+        XCTAssertNil(firstSectionTitle)
+        XCTAssertNil(secondSectionTitle)
+    }
+    
+    func testWhenFirstSectionHasTaskFirstSectionNameIsSet() {
+        let task = Task(title: "Foo")
+        sut.taskManager?.add(task: task)
+        tableView.reloadData()
+        
+        let title = sut.tableView(tableView, titleForHeaderInSection: 0)
+        
+        XCTAssertNotNil(title)
+    }
+    
+    func testWhenSecondSectionHasTaskSecondSectionNameIsSet() {
+        let task = Task(title: "Foo")
+        sut.taskManager?.add(task: task)
+        sut.taskManager?.checkTask(at: 0)
+        tableView.reloadData()
+        
+        let title = sut.tableView(tableView, titleForHeaderInSection: 1)
+        
+        XCTAssertNotNil(title)
+    }
+    
+    func testWhenSectionsHasTasksSectionsNameIsSet() {
+        let task1 = Task(title: "Foo")
+        let task2 = Task(title: "Bar")
+        sut.taskManager?.add(task: task1)
+        sut.taskManager?.add(task: task2)
+        sut.taskManager?.checkTask(at: 0)
+        tableView.reloadData()
+        
+        let firstSectionTitle = sut.tableView(tableView, titleForHeaderInSection: 0)
+        let secondSectionTitle = sut.tableView(tableView, titleForHeaderInSection: 1)
+        
+        XCTAssertNotNil(firstSectionTitle)
+        XCTAssertNotNil(secondSectionTitle)
+    }
 }
 
 extension DataProviderTests {

@@ -56,6 +56,21 @@ extension DataProvider: UITableViewDelegate {
             break
         }
     }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        guard let section = Section(rawValue: section) else { fatalError() }
+        switch section {
+        case .todo:
+            if taskManager!.tasksCount > 0 {
+                return "ToDo tasks"
+            }
+        case .done:
+            if taskManager!.doneTasksCount > 0 {
+                return "Done tasks"
+            }
+        }
+        return nil
+    }
 }
 
 extension DataProvider: UITableViewDataSource {
@@ -88,7 +103,7 @@ extension DataProvider: UITableViewDataSource {
             task = taskManager.doneTask(at: indexPath.row)
         }
         
-        cell.configure(withTask: task)
+        cell.configure(withTask: task, done: task.isDone)
         
         return cell
     }

@@ -35,11 +35,6 @@ class NewTaskViewController: UIViewController {
         let descriptionString = descriptionTF.text
         
         geocoder.geocodeAddressString(addressString!) { [unowned self] (placemarks, error) in
-            if let error = error {
-                print("Placemark has an error: \(error)")
-                return
-            }
-            
             let placemark = placemarks?.first
             let coordinate = placemark?.location?.coordinate
             let location = Location(name: locationString!, coordinate: coordinate)

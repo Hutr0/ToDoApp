@@ -124,4 +124,23 @@ class TaskManagerTests: XCTestCase {
         XCTAssertEqual(taskManager.task(at: 0), task1)
         XCTAssertEqual(taskManager.task(at: 1), task2)
     }
+    
+    func testWhenTaskCheckedHasIsDoneEqualsTrue() {
+        let task = Task(title: "Foo")
+        sut.add(task: task)
+        
+        sut.checkTask(at: 0)
+        
+        XCTAssertTrue(sut.doneTask(at: 0).isDone)
+    }
+    
+    func testWhenTaskUncheckedHasIsDoneEqualsFalse() {
+        let task = Task(title: "Foo")
+        sut.add(task: task)
+        
+        sut.checkTask(at: 0)
+        sut.uncheckTask(at: 0)
+        
+        XCTAssertFalse(sut.task(at: 0).isDone)
+    }
 }
